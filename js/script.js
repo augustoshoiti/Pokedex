@@ -26,15 +26,16 @@ const renderPokemon = async (pokemon) => {
     
     if (data) {
         pokemonImage.style.display = 'block';
-        pokemonName.innerHTML = data.name;
+        pokemonName.innerHTML = data.species.name;
         pokemonNumber.innerHTML = data.id;
         pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
         input.value = '';
         searchPokemon = data.id;
     } else {
-        pokemonImage.style.display = 'none';
+        pokemonImage.src = './image/sus.png';
         pokemonName.innerHTML = 'Not found'
         pokemonNumber.innerHTML = '😰'
+        input.value = '';
     }
 }
 
