@@ -21,7 +21,7 @@ const fetchPokemon = async (pokemon) => {
 const renderPokemon = async (pokemon) => {
     pokemonName.innerHTML = 'Loading...';
     pokemonNumber.innerHTML = '';
-    pokemonImage.src = './image/sus.png';
+    pokemonImage.src = 'image/ponto.png ';
 
     const data = await fetchPokemon(pokemon);
     
